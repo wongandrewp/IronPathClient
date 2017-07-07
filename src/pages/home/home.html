@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Iron Path
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+      <button ion-button (click) = "recordVideo()">Tap to Record Video</button>
+      <button ion-button (click) = "playVideo()">Tap to Play Video</button>
+      <button ion-button (click) = "upload()">Tap to Upload the Recorded Video</button>
+      <h1>
+        Record Video is located at {{ path }}
+      </h1>
+     <div class="modal transparent fullscreen-player" ng-click="closeModal()">
+      <video src="{{path}}" class="centerme" controls="controls" autoplay></video>
+    </div>
+    <div class="modal transparent fullscreen-player" ng-click="closeModal()">
+      <video src="http://192.168.1.126:8080/files/ball_tracking_example.mp4" class="centerme" controls="controls" autoplay></video>
+    </div>
+</ion-content>
